@@ -135,20 +135,20 @@ let scrabbleScore = function (word) {
 let simplyScore = {
       name: "Simple Score", 
       description: "Each letter is worth 1 point",
-      scorerFunction: simpleScore
+      scoringFunction: simpleScore
 };
 
 let bonusVowelsScore = {
       name: "Bonus Vowels", 
       description: "Vowels are 3 pts, consonants are 1 pt", 
-    scorerFunction: vowelBonusScore
+    scoringFunction: vowelBonusScore
 
 };
 
 let scrabble = {
        name: "Scrabble",
        description: "The traditional scoring algorithm",
-       scorerFunction: scrabbleScore
+       scoringFunction: scrabbleScore
 
 };
 
@@ -165,12 +165,12 @@ function scorerPrompt() {
        } 
 
      if (algorithmChoice.includes('0')) {
-     console.log(`Score for '${playerResponse}':`,scoringAlgorithms[0].scorerFunction(playerResponse));  }
+     console.log(`Score for '${playerResponse}':`,scoringAlgorithms[0].scoringFunction(playerResponse));  }
 
      else if (algorithmChoice.includes('1')) {
-console.log(`Score for '${playerResponse}':`,scoringAlgorithms[1].scorerFunction(playerResponse));  }
+console.log(`Score for '${playerResponse}':`,scoringAlgorithms[1].scoringFunction(playerResponse));  }
      else if (algorithmChoice.includes('2')) {
-console.log(`Score for '${playerResponse}':`,scoringAlgorithms[2].scorerFunction(playerResponse));
+console.log(`Score for '${playerResponse}':`,scoringAlgorithms[2].scoringFunction(playerResponse));
      }
   }
 
